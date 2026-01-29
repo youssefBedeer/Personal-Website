@@ -16,13 +16,13 @@ config["blog_posts"] = [
     },
     {
         "title": "End-to-End Plant Disease Detection System",
-        "date": "2025-06-01",
+        "date": "2026-01-30",
         "tags": ["MLOps", "Computer Vision"],
         "readme_path": "https://raw.githubusercontent.com/youssefBedeer/End-to-End-PlantVillage/main/README.md"
     },
     {
         "title": "End-to-End PDF Q&A System",
-        "date": "2025-06-01",
+        "date": "2026-01-30",
         "tags": ["LLMs", "RAG"],
         "readme_path": "https://raw.githubusercontent.com/youssefBedeer/RAG-End-to-End/main/README.md"
     }

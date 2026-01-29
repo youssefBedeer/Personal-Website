@@ -1,6 +1,7 @@
 import pathlib
 from typing import Any, Dict, List
 
+import requests
 import streamlit as st
 import yaml
 
@@ -403,6 +404,17 @@ def render_contact(cfg: Dict[str, Any]) -> None:
         )
 
 
+@st.cache_data(ttl=3600)  # Cache for 1 hour
+def fetch_readme_content(url: str) -> str:
+    """Fetch README content from a URL."""
+    try:
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        return response.text
+    except requests.RequestException as e:
+        return f"Error fetching content: {str(e)}"
+
+
 def render_blog(cfg: Dict[str, Any]) -> None:
     st.markdown('### <span class="section-title">Writing & <span class="accent">Notes</span></span>', unsafe_allow_html=True)
     st.caption("Deep dives into projects, MLOps, and AI systems thinking.")
@@ -423,7 +435,15 @@ def render_blog(cfg: Dict[str, Any]) -> None:
     title = selected_post.get("title", "Untitled post")
     date = selected_post.get("date")
     tags = selected_post.get("tags", [])
+    
+    # Check if we have readme_path or content
+    readme_path = selected_post.get("readme_path")
     content = selected_post.get("content") or selected_post.get("summary", "")
+    
+    # If readme_path is provided, fetch content from URL
+    if readme_path:
+        with st.spinner("Loading content..."):
+            content = fetch_readme_content(readme_path)
 
     st.subheader(title)
 
@@ -446,6 +466,7 @@ def render_blog(cfg: Dict[str, Any]) -> None:
             if post.get("title") == selected_title:
                 continue
             st.markdown(f"- {post.get('title', 'Untitled post')}")
+
 
 
 def main() -> None:

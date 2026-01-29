@@ -16,125 +16,57 @@ social_links:
   GitHub: https://github.com/youssefBedeer
 projects:
 - name: Telco Customer Churn Prediction – End-to-End ML System
-  tagline: RAG-based assistant for customer support teams
-  description: 'Designed and deployed an end-to-end ML system covering 5 core stages
-    (ingestion, validation, feature engineering, training, deployment) to support
-    proactive customer retention strategies. Implemented MLOps workflows using MLflow
-    to track multiple experiment runs and model versions, improving reproducibility
-    and comparison across iterations. Deployed a containerized REST API using FastAPI
-    and Docker, integrated with AWS infrastructure and CI/CD pipelines to enable reliable,
-    repeatable production releases.
-
-    '
+  tagline: Production-Level ML Pipeline with Modular Architecture
+  description: |
+    • Built a production-level ML pipeline with modular parts for data ingestion, schema validation, feature engineering, and model training, following best practices in software engineering.
+    • Optimised an XGBoost classifier using Optuna’s Tree-structured Parzen Estimator (TPE) algorithm for Bayesian hyperparameter tuning of nine hyperparameters, systematically improving model metrics.
+    • Created a thorough data preprocessing pipeline with scikit-learn transformers, handling categorical encoding (one-hot, label), numerical scaling (StandardScaler), and missing value imputation for robust feature engineering.
   tech_stack:
   - Python
-  - Pandas
+  - XGBoost
+  - Optuna
   - Scikit-learn
   - FastAPI
-  - MLflow
   - Docker
-  metrics:
-  - Reduced average handling time by 35%
-  - Automated 40%+ of repetitive support tickets
-  - Integrated with Slack and web widget
+  metrics: []
   links:
-    demo: https://your-demo-link.com
     github: https://github.com/youssefBedeer/End-to-End-TelcoChurn
   image: https://www.istockphoto.com/photos/telecommunications
-- name: MLOps Pipeline for Computer Vision
-  tagline: CI/CD for training, evaluation, and deployment
-  description: 'Designed an MLOps pipeline for training and deploying computer vision
-    models with experiment tracking, model registry, and automated validation.
-
-    '
+- name: End-to-End Plant Disease Detection System
+  tagline: CV Pipeline with Transfer Learning & MLOps
+  description: |
+    • Developed an end-to-end CV pipeline classifying 15 plant disease categories from leaf images using VGG16 (ImageNet pre-trained) transfer learning.
+    • Built a production-ready ML stack with DVC (data versioning + pipelines), MLflow (tracking + registry), and Dagshub (reproducibility) to enable smooth model promotion to production.
+    • Deployed a full-stack solution with FastAPI for real-time inference and Streamlit for user-friendly predictions, enabling users to upload images and receive instant diagnoses.
   tech_stack:
   - Python
-  - PyTorch
-  - MLflow
+  - Deep Learning
   - DVC
-  - Docker
-  - GitHub Actions
-  metrics:
-  - Cut model deployment time from weeks to days
-  - Reproducible experiments with full lineage tracking
-  links:
-    demo: ''
-    github: https://github.com/your-handle/cv-mlops-pipeline
-    docs: ''
-  image: ''
-- name: Telco Customer Churn Prediction – End-to-End ML System
-  tagline: RAG-based assistant for customer support teams
-  description: 'Designed and deployed an end-to-end ML system covering 5 core stages
-    (ingestion, validation, feature engineering, training, deployment) to support
-    proactive customer retention strategies. Implemented MLOps workflows using MLflow
-    to track multiple experiment runs and model versions, improving reproducibility
-    and comparison across iterations. Deployed a containerized REST API using FastAPI
-    and Docker, integrated with AWS infrastructure and CI/CD pipelines to enable reliable,
-    repeatable production releases.
-
-    '
-  tech_stack:
-  - Python
-  - Pandas
-  - Scikit-learn
+  - MLflow
+  - Dagshub
   - FastAPI
-  - MLflow
-  - Docker
-  metrics:
-  - Reduced average handling time by 35%
-  - Automated 40%+ of repetitive support tickets
-  - Integrated with Slack and web widget
+  - Streamlit
+  metrics: []
   links:
-    demo: https://your-demo-link.com
-    github: https://github.com/youssefBedeer/End-to-End-TelcoChurn
-  image: https://www.istockphoto.com/photos/telecommunications
-- name: MLOps Pipeline for Computer Vision
-  tagline: CI/CD for training, evaluation, and deployment
-  description: 'Designed an MLOps pipeline for training and deploying computer vision
-    models with experiment tracking, model registry, and automated validation.
-
-    '
-  tech_stack:
-  - Python
-  - PyTorch
-  - MLflow
-  - DVC
-  - Docker
-  - GitHub Actions
-  metrics:
-  - Cut model deployment time from weeks to days
-  - Reproducible experiments with full lineage tracking
-  links:
-    demo: ''
-    github: https://github.com/your-handle/cv-mlops-pipeline
-    docs: ''
+    github: https://github.com/youssefBedeer/End-to-End-PlantVillage
   image: ''
-- name: Telco Customer Churn Prediction – End-to-End ML System
-  tagline: RAG-based assistant for customer support teams
-  description: 'Designed and deployed an end-to-end ML system covering 5 core stages
-    (ingestion, validation, feature engineering, training, deployment) to support
-    proactive customer retention strategies. Implemented MLOps workflows using MLflow
-    to track multiple experiment runs and model versions, improving reproducibility
-    and comparison across iterations. Deployed a containerized REST API using FastAPI
-    and Docker, integrated with AWS infrastructure and CI/CD pipelines to enable reliable,
-    repeatable production releases.
-
-    '
+- name: RAG Document Q&A System
+  tagline: Retrieval & Generation Workflow with LangChain
+  description: |
+    • Developed an end-to-end RAG PDF Q&A system using LangChain/LangGraph, enabling grounded answers through a retrieval and generation workflow.
+    • Implemented semantic search with Sentence Transformers (384-dim) embeddings and Pinecone vector database for scalable similarity retrieval.
+    • Deployed a production-ready app with FastAPI and Streamlit, supporting SSE streaming, automated PDF chunking, and session based multi-turn memory.
   tech_stack:
   - Python
-  - Pandas
-  - Scikit-learn
+  - LangChain
+  - LangGraph
+  - Pinecone
   - FastAPI
-  - MLflow
-  - Docker
-  metrics:
-  - Reduced average handling time by 35%
-  - Automated 40%+ of repetitive support tickets
-  - Integrated with Slack and web widget
+  - Streamlit
+  metrics: []
   links:
-    demo: https://your-demo-link.com
-    github: https://github.com/youssefBedeer/End-to-End-TelcoChurn
-  image: https://www.istockphoto.com/photos/telecommunications
+    github: https://github.com/youssefBedeer/RAG-End-to-End
+  image: ''
 skills:
   Languages & Core:
     items:
@@ -173,6 +105,8 @@ skills:
       level: Beginner
 contact:
   email: youssef1bedeer@gmail.com
+  linkedin: https://www.linkedin.com/in/youssef-bedeer/
+  github: https://github.com/youssefBedeer
   location: PortSaid, Egypt
   availability: Open to opportunities
   phone_1: 01226627188
